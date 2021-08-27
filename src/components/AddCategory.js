@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const AddCategory = ( { setCategories } ) => {
 
-    const [inputValue, setInpuValue] = useState('Hola Mundo')
+    const [inputValue, setInpuValue] = useState('')
 
     const handleInputChange = ( e ) => {
         setInpuValue( e.target.value );
