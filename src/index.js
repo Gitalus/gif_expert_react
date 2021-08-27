@@ -4,6 +4,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <GiftExpertApp />,
   document.getElementById('root')
 );
+
+
+// GifExpertApp
+
+function GiftExpertApp () {
+  return (
+    <>
+      <h2>GiftExpertApp</h2>
+      <hr />
+    </>
+  )
+}
