@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const AddCategory = () => {
+
+    const [inputValue, setInpuValue] = useState('Hola Mundo')
+
+    const handleInputChange = ( e ) => {
+        setInpuValue( e.target.value );
+    }
+
     return (
         <>
-            <h2>Add Category</h2>
+            <input 
+                type="text"
+                value={ inputValue }
+                onChange={ handleInputChange }
+            />
         </>
     )
 }
