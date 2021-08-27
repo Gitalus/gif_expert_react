@@ -10,7 +10,7 @@ export const AddCategory = ( { setCategories } ) => {
 
     const handleSubmit = ( e ) => {
         e.preventDefault();
-        setCategories([inputValue]);
+        setCategories(cats => [...cats, inputValue]);
     }
 
     return (
