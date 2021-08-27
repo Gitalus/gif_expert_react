@@ -15,7 +15,9 @@ function GiftExpertApp () {
             <ol>
                 {
                     categories.map(category => 
-                        <GifGrid category={ category }/>
+                        <GifGrid 
+                            key= { category }
+                            category={ category }/>
                         )
                 }
             </ol>
