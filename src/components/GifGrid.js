@@ -8,8 +8,8 @@ export const GifGrid = ({ category }) => {
 
     useEffect(()=>{
         getGifs( category )
-            .then( setImages )
-    }, [])
+            .then( setImages );
+    }, [ category ])
 
     return (
         <>
