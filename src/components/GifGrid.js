@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 export const GifGrid = ({ category }) => {
 
-    const [count, setCount] = useState(0)
+    const [images, setImages] = useState([]);
 
     useEffect(()=>{
         getGifs();
@@ -21,13 +21,20 @@ export const GifGrid = ({ category }) => {
                 url: img.images?.downsized_medium.url
             }
         })
+        console.log(gifs);
+        setImages( gifs );
     }
 
     return (
         <>
             <h3> { category }</h3>
-            <h3> { count } </h3>
-            <button onClick={ () => setCount( count + 1 ) }>+1</button>
+            <ol>
+                {
+                    images.map((imagen) => {
+                        return <li key= { imagen.id }><h1>{ imagen.title }</h1><img src={ imagen.url } alt="Rick and Morty image"/></li>
+                    })
+                }
+            </ol>
         </>
     )
 }
